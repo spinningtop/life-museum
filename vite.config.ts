@@ -1,16 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tsconfigPaths from "vite-tsconfig-paths";
+import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/life-museum/', // 新增这一行！适配GitHub Pages
+  base: process.env.GITHUB_ACTIONS ? '/life-museum/' : '/',
   server: {
     port: 5180,
     host: true,
   },
   build: {
     sourcemap: 'hidden',
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+    extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json'],
   },
   plugins: [
     react({
@@ -20,6 +26,5 @@ export default defineConfig({
         ],
       },
     }),
-    tsconfigPaths()
   ],
 })

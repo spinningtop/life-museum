@@ -24,8 +24,8 @@ dist-ssr
 .trae/
 .playwright/
 
-sudongpo/
-museum/
+/sudongpo/
+/museum/
 
 *.pyc
 __pycache__/

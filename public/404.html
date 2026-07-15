@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>人生博物馆</title>
+    <script>
+      // GitHub Pages 子路由刷新 404 重定向
+      // 将所有子路径重定向到首页，由前端路由接管
+      var pathSegmentsToKeep = 1; // 仓库名占 1 段
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        (l.hash)
+      );
+    </script>
+  </head>
+  <body>
+    正在跳转到人生博物馆...
+  </body>
+</html>
