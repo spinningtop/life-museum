@@ -89,6 +89,17 @@ export default function Epilogue() {
           <p className="mt-8 font-serif text-sm text-[#f1faee]/30">
             —— 完 ——
           </p>
+
+          {/* 版权声明 */}
+          <div className="mx-auto mt-10 max-w-md rounded-lg border border-[#e63946]/20 bg-[#e63946]/5 px-5 py-4">
+            <p className="font-sans text-xs leading-relaxed text-[#f1faee]/50">
+              本页内容基于《埃隆·马斯克传》原书进行结构化整理与可视化展示，仅用于学习交流与阅读体验探索，
+              不用于商业用途。原书版权归原作者及出版社所有。
+            </p>
+            <p className="mt-2 font-sans text-xs leading-relaxed text-[#e63946]/70">
+              建议购买正版书籍，支持原作者与出版社，完整阅读原著更能感受马斯克人生的细节与张力。
+            </p>
+          </div>
         </div>
       </div>
     </section>

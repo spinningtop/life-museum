@@ -89,6 +89,17 @@ export default function Epilogue() {
           <p className="mt-8 font-serif text-sm text-[#f5e6d3]/30">
             —— 完 ——
           </p>
+
+          {/* 版权声明 */}
+          <div className="mx-auto mt-10 max-w-md rounded-lg border border-[#c73e3a]/20 bg-[#c73e3a]/5 px-5 py-4">
+            <p className="font-sans text-xs leading-relaxed text-[#f5e6d3]/50">
+              本页内容基于《苏东坡传》原书进行结构化整理与可视化展示，仅用于学习交流与阅读体验探索，
+              不用于商业用途。原书版权归原作者及出版社所有。
+            </p>
+            <p className="mt-2 font-sans text-xs leading-relaxed text-[#c73e3a]/70">
+              建议购买正版书籍，支持原作者与出版社，完整阅读原著更能感受苏东坡人生的豁达与诗意。
+            </p>
+          </div>
         </div>
       </div>
     </section>
