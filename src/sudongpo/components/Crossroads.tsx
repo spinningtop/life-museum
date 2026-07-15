@@ -16,12 +16,12 @@ export default function Crossroads() {
     <section className="relative mx-auto max-w-5xl px-6 py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题区 */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center sm:mb-16">
           <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#c73e3a]">CROSSROADS</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f5e6d3] sm:text-5xl">
+          <h2 className="font-serif text-3xl font-bold text-[#f5e6d3] sm:text-4xl md:text-5xl">
             命运的岔路口
           </h2>
-          <p className="mt-4 font-sans text-sm text-[#f5e6d3]/50">
+          <p className="mt-3 font-sans text-sm text-[#f5e6d3]/50">
             历史的分岔口 · 五个如果当时
           </p>
         </div>

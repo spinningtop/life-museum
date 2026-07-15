@@ -33,10 +33,10 @@ export default function ThemeDeep() {
     <section className="relative mx-auto max-w-7xl px-6 py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题 */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center sm:mb-16">
           <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#c73e3a]">THEMES</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f5e6d3] sm:text-5xl">核心主题</h2>
-          <p className="mt-4 font-sans text-sm text-[#f5e6d3]/50">
+          <h2 className="font-serif text-3xl font-bold text-[#f5e6d3] sm:text-4xl md:text-5xl">核心主题</h2>
+          <p className="mt-3 font-sans text-sm text-[#f5e6d3]/50">
             五条贯穿一生的精神脉络 · 理解苏东坡的密码
           </p>
         </div>

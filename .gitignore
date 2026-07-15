@@ -36,9 +36,15 @@ verify-screenshots/
 book_full_text.txt
 sudongpo-part-*.txt
 sudongpo-text.txt
+jobs_full_text.txt
+zeng_full_text.txt
+*_full_text.txt
 
 extract_full_text.py
 extract_pdf.py
+extract_jobs_pdf.py
+extract_zeng_pdf.py
+extract_*.py
 split-text.cjs
 parse-sudongpo.cjs
 

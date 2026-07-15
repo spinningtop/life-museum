@@ -79,10 +79,10 @@ function StageSection({ stage, events }: { stage: LifeStage; events: TimelineEve
         </div>
 
         {/* 左侧时间线 + 右侧事件卡片 */}
-        <div className="relative grid gap-4 pl-20 sm:gap-5 sm:pl-24">
+        <div className="relative grid gap-3 pl-14 sm:gap-4 sm:pl-20 md:gap-5 md:pl-24">
           {/* 垂直时间线 */}
           <div
-            className="absolute left-[28px] top-0 h-full w-px sm:left-[32px]"
+            className="absolute left-[18px] top-0 h-full w-px sm:left-[28px] md:left-[32px]"
             style={{ background: `linear-gradient(to bottom, ${stage.color}, transparent)` }}
           />
 
@@ -115,7 +115,7 @@ function EventCard({
     >
       {/* 时间线节点 */}
       <div
-        className="absolute -left-[52px] top-4 flex h-4 w-4 items-center justify-center rounded-full sm:-left-[64px]"
+        className="absolute -left-[38px] top-4 flex h-4 w-4 items-center justify-center rounded-full sm:-left-[52px] md:-left-[64px]"
         style={{
           backgroundColor: isHigh ? color : '#1a1a2e',
           border: `2px solid ${colorLight}`,

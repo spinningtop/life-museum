@@ -143,23 +143,23 @@ export default function PeopleMap() {
   const hasDetail = selectedRelationship !== null || selectedPerson !== null;
 
   return (
-    <section className="relative mx-auto max-w-5xl px-6 py-20">
+    <section className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#e63946]">
+        <div className="mb-10 text-center sm:mb-12">
+          <p className="mb-2 font-sans text-xs tracking-[0.25em] text-[#e63946] sm:mb-3 sm:text-sm sm:tracking-[0.3em]">
             CONSTELLATION
           </p>
-          <h2 className="font-serif text-4xl font-bold text-[#f1faee] sm:text-5xl">
+          <h2 className="font-serif text-3xl font-bold text-[#f1faee] sm:text-4xl md:text-5xl">
             人物星图
           </h2>
-          <p className="mt-4 font-sans text-sm text-[#f1faee]/50">
+          <p className="mt-3 font-sans text-xs text-[#f1faee]/50 sm:mt-4 sm:text-sm">
             马斯克的人际宇宙 · 三圈十八人
           </p>
         </div>
 
         {/* 主体：SVG 星图 + 详情卡片 */}
-        <div className="glass-card relative overflow-hidden p-4 sm:p-6">
+        <div className="glass-card relative overflow-hidden p-3 sm:p-4 md:p-6">
           <div className="flex flex-col gap-6 lg:flex-row">
             {/* SVG 星图（小屏可横向滚动） */}
             <div className="w-full min-w-0 flex-1 overflow-x-auto">

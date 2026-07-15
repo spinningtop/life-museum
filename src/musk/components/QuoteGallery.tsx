@@ -51,12 +51,12 @@ export default function QuoteGallery() {
   const accent = emotionAccent[current.emotion];
 
   return (
-    <section className="relative px-6 py-20">
+    <section className="relative px-4 py-16 sm:px-6 sm:py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#e63946]">QUOTES</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f1faee] sm:text-5xl">金句长廊</h2>
+        <div className="mb-10 text-center sm:mb-12">
+          <p className="mb-2 font-sans text-xs tracking-[0.25em] text-[#e63946] sm:mb-3 sm:text-sm sm:tracking-[0.3em]">QUOTES</p>
+          <h2 className="font-serif text-3xl font-bold text-[#f1faee] sm:text-4xl md:text-5xl">金句长廊</h2>
         </div>
 
         {/* 轮播容器 */}
@@ -72,9 +72,9 @@ export default function QuoteGallery() {
           />
 
           {/* 内容层 */}
-          <div className="relative px-8 py-16 sm:px-16 sm:py-20">
+          <div className="relative px-5 py-10 sm:px-10 sm:py-14 md:px-16 md:py-20">
             <QuoteIcon
-              className="mx-auto mb-8 h-10 w-10 transition-colors duration-500"
+              className="mx-auto mb-6 h-8 w-8 transition-colors duration-500 sm:mb-8 sm:h-10 sm:w-10"
               style={{ color: `${accent}80` }}
             />
 
@@ -84,19 +84,19 @@ export default function QuoteGallery() {
               className="animate-fade-in-up mx-auto max-w-4xl text-center"
             >
               <p
-                className="font-serif text-2xl font-medium leading-relaxed transition-colors duration-500 sm:text-3xl md:text-4xl"
+                className="font-serif text-lg font-medium leading-relaxed transition-colors duration-500 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
                 style={{ color: '#f1faee' }}
               >
                 {current.quote}
               </p>
-              <footer className="mt-8 flex flex-col items-center gap-2">
+              <footer className="mt-6 flex flex-col items-center gap-1 sm:mt-8 sm:gap-2">
                 <span
-                  className="font-serif text-base font-bold transition-colors duration-500"
+                  className="font-serif text-sm font-bold transition-colors duration-500 sm:text-base"
                   style={{ color: accent }}
                 >
                   —— {current.speaker}
                 </span>
-                <span className="font-sans text-xs text-[#f1faee]/50">
+                <span className="font-sans text-[10px] text-[#f1faee]/50 sm:text-xs">
                   {current.context} · 第{current.chapter}章
                 </span>
               </footer>
@@ -106,18 +106,18 @@ export default function QuoteGallery() {
             <button
               type="button"
               onClick={() => go(-1)}
-              className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/5 text-[#f1faee]/60 backdrop-blur transition-all hover:bg-white/10 hover:text-[#f1faee] sm:left-5"
+              className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/5 text-[#f1faee]/60 backdrop-blur transition-all hover:bg-white/10 hover:text-[#f1faee] sm:left-4 sm:h-11 sm:w-11 md:left-5"
               aria-label="上一条"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
             <button
               type="button"
               onClick={() => go(1)}
-              className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/5 text-[#f1faee]/60 backdrop-blur transition-all hover:bg-white/10 hover:text-[#f1faee] sm:right-5"
+              className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/5 text-[#f1faee]/60 backdrop-blur transition-all hover:bg-white/10 hover:text-[#f1faee] sm:right-4 sm:h-11 sm:w-11 md:right-5"
               aria-label="下一条"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
           </div>
 

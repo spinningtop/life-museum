@@ -43,13 +43,13 @@ export default function ThemeDeep() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section className="relative mx-auto max-w-7xl px-6 py-20">
+    <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题 */}
-        <div className="mb-16 text-center">
-          <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#e63946]">THEMES</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f1faee] sm:text-5xl">核心主题</h2>
-          <p className="mt-4 font-sans text-sm text-[#f1faee]/50">
+        <div className="mb-12 text-center sm:mb-16">
+          <p className="mb-2 font-sans text-xs tracking-[0.25em] text-[#e63946] sm:mb-3 sm:text-sm sm:tracking-[0.3em]">THEMES</p>
+          <h2 className="font-serif text-3xl font-bold text-[#f1faee] sm:text-4xl md:text-5xl">核心主题</h2>
+          <p className="mt-3 font-sans text-xs text-[#f1faee]/50 sm:mt-4 sm:text-sm">
             十二条贯穿全书的精神脉络 · 理解马斯克的密码
           </p>
         </div>
@@ -72,23 +72,23 @@ function ThemeCard({ theme }: { theme: Theme }) {
 
   return (
     <div
-      className="glass-card group relative h-full overflow-hidden p-6 transition-all duration-500 hover:border-[#e63946]/30 hover:translate-y-[-2px]"
+      className="glass-card group relative h-full overflow-hidden p-4 transition-all duration-500 hover:border-[#e63946]/30 hover:translate-y-[-2px] sm:p-5 md:p-6"
     >
       {/* 编号 */}
-      <span className="absolute right-4 top-4 font-serif text-5xl font-black text-white/5">
+      <span className="absolute right-3 top-3 font-serif text-4xl font-black text-white/5 sm:right-4 sm:top-4 sm:text-5xl">
         {String(theme.id).padStart(2, '0')}
       </span>
 
       {/* 图标 */}
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#e63946]/10 transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#e63946]/20">
-        <Icon className="h-6 w-6 text-[#e63946]" />
+      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#e63946]/10 transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#e63946]/20 sm:mb-4 sm:h-12 sm:w-12">
+        <Icon className="h-5 w-5 text-[#e63946] sm:h-6 sm:w-6" />
       </div>
 
       {/* 标题 */}
-      <h3 className="font-serif text-lg font-bold text-[#f1faee]">{theme.title}</h3>
+      <h3 className="font-serif text-base font-bold text-[#f1faee] sm:text-lg">{theme.title}</h3>
 
       {/* 描述 */}
-      <p className="mt-3 font-sans text-sm leading-relaxed text-[#f1faee]/65">
+      <p className="mt-2 font-sans text-xs leading-relaxed text-[#f1faee]/65 sm:mt-3 sm:text-sm">
         {theme.description}
       </p>
 

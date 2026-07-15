@@ -31,29 +31,29 @@ export default function Prologue() {
     <section className="relative mx-auto max-w-7xl px-6 py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题 */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center sm:mb-16">
           <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#c73e3a]">GUIDE</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f5e6d3] sm:text-5xl">
+          <h2 className="font-serif text-3xl font-bold text-[#f5e6d3] sm:text-4xl md:text-5xl">
             导读：苏东坡其人
           </h2>
-          <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-[#c73e3a] to-transparent" />
+          <div className="mx-auto mt-4 h-px w-24 bg-gradient-to-r from-transparent via-[#c73e3a] to-transparent sm:mt-6" />
         </div>
 
         {/* 左右分栏 */}
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
           {/* 左侧叙事 */}
-          <div className="space-y-10">
+          <div className="space-y-6 sm:space-y-10">
             {narratives.map((item, idx) => (
               <div
                 key={item.title}
-                className="glass-card p-7 transition-all duration-700 hover:border-[#c73e3a]/30"
+                className="glass-card p-5 transition-all duration-700 hover:border-[#c73e3a]/30 sm:p-7"
                 style={{
                   opacity: isVisible ? 1 : 0,
                   transitionDelay: `${idx * 200}ms`,
                   transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
                 }}
               >
-                <h3 className="mb-3 flex items-center gap-2 font-serif text-xl font-semibold text-[#c73e3a]">
+                <h3 className="mb-2 flex items-center gap-2 font-serif text-lg font-semibold text-[#c73e3a] sm:mb-3 sm:text-xl">
                   <span className="h-4 w-1 rounded-full bg-[#c73e3a]" />
                   {item.title}
                 </h3>
@@ -65,20 +65,20 @@ export default function Prologue() {
           </div>
 
           {/* 右侧引用卡片 */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {prologueQuotes.map((quote, idx) => (
               <figure
                 key={quote.id}
-                className="glass-card-strong group relative overflow-hidden p-7 transition-all duration-500 hover:glow-vermilion"
+                className="glass-card-strong group relative overflow-hidden p-5 transition-all duration-500 hover:glow-vermilion sm:p-7"
                 style={{
                   transitionDelay: `${idx * 150}ms`,
                 }}
               >
-                <QuoteIcon className="mb-3 h-6 w-6 text-[#c73e3a]/50 transition-colors group-hover:text-[#c73e3a]" />
+                <QuoteIcon className="mb-2 h-5 w-5 text-[#c73e3a]/50 transition-colors group-hover:text-[#c73e3a] sm:mb-3 sm:h-6 sm:w-6" />
                 <blockquote className="font-serif text-base leading-relaxed text-[#f5e6d3]/90">
                   {quote.text}
                 </blockquote>
-                <figcaption className="mt-4 border-l-2 border-[#c73e3a]/40 pl-3 font-sans text-xs text-[#e9c46a]/60">
+                <figcaption className="mt-3 border-l-2 border-[#c73e3a]/40 pl-3 font-sans text-xs text-[#e9c46a]/60 sm:mt-4">
                   <span className="font-semibold text-[#c73e3a]">《{quote.source}》</span>
                   <span className="mx-2 text-[#f5e6d3]/30">·</span>
                   {quote.year}年

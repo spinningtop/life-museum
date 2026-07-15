@@ -13,15 +13,15 @@ export default function Crossroads() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section className="relative mx-auto max-w-5xl px-6 py-20">
+    <section className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题区 */}
-        <div className="mb-16 text-center">
-          <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#e63946]">CROSSROADS</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f1faee] sm:text-5xl">
+        <div className="mb-12 text-center sm:mb-16">
+          <p className="mb-2 font-sans text-xs tracking-[0.25em] text-[#e63946] sm:mb-3 sm:text-sm sm:tracking-[0.3em]">CROSSROADS</p>
+          <h2 className="font-serif text-3xl font-bold text-[#f1faee] sm:text-4xl md:text-5xl">
             命运的岔路口
           </h2>
-          <p className="mt-4 font-sans text-sm text-[#f1faee]/50">
+          <p className="mt-3 font-sans text-xs text-[#f1faee]/50 sm:mt-4 sm:text-sm">
             历史的分岔口 · 五个如果当时
           </p>
         </div>
@@ -49,7 +49,7 @@ function CrossroadCard({ crossroad, index }: { crossroad: Crossroad; index: numb
   return (
     <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
       <div
-        className="glass-card group relative overflow-hidden p-6 transition-all duration-500 hover:translate-y-[-2px] sm:p-8"
+        className="glass-card group relative overflow-hidden p-4 transition-all duration-500 hover:translate-y-[-2px] sm:p-6 md:p-8"
         style={{
           borderColor: `${accentColor}50`,
           boxShadow: isAlternate ? `0 0 28px ${accentColor}30` : undefined,
@@ -57,26 +57,26 @@ function CrossroadCard({ crossroad, index }: { crossroad: Crossroad; index: numb
       >
         {/* 顶部装饰光晕 */}
         <div
-          className="absolute -top-16 -right-16 h-32 w-32 rounded-full opacity-10 blur-2xl transition-opacity duration-500 group-hover:opacity-25"
+          className="absolute -top-12 -right-12 h-24 w-24 rounded-full opacity-10 blur-2xl transition-opacity duration-500 group-hover:opacity-25 sm:-top-16 sm:-right-16 sm:h-32 sm:w-32"
           style={{ backgroundColor: accentColor }}
         />
 
         {/* 左右分栏布局 */}
-        <div className="relative flex flex-col gap-6 sm:flex-row">
+        <div className="relative flex flex-col gap-4 sm:gap-6 sm:flex-row">
           {/* 左侧：年份 + 时刻 */}
           <div className="sm:w-1/3 sm:shrink-0">
             <div className="flex items-baseline gap-2">
               <span
-                className="font-serif text-4xl font-bold leading-none"
+                className="font-serif text-3xl font-bold leading-none sm:text-4xl"
                 style={{ color: accentColor }}
               >
                 {crossroad.year}
               </span>
-              <span className="font-sans text-xs text-[#f1faee]/40">
+              <span className="font-sans text-[10px] text-[#f1faee]/40 sm:text-xs">
                 岔路口 {String(index + 1).padStart(2, '0')}
               </span>
             </div>
-            <p className="mt-3 font-serif text-sm leading-relaxed text-[#f1faee]/75">
+            <p className="mt-2 font-serif text-sm leading-relaxed text-[#f1faee]/75 sm:mt-3">
               {crossroad.moment}
             </p>
           </div>

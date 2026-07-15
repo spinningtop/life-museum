@@ -28,4 +28,22 @@ export const biographies: Biography[] = [
     coverColor: '#D4A574',
     tagline: '文人',
   },
+  {
+    id: 'jobs',
+    name: '史蒂夫·乔布斯传',
+    subtitle: '从被遗弃的婴儿到改变世界',
+    era: '1955—2011',
+    bioUrl: '/jobs',
+    coverColor: '#C0C0C0',
+    tagline: '极简者',
+  },
+  {
+    id: 'zeng',
+    name: '曾国藩传',
+    subtitle: '从农家子弟到中兴名臣',
+    era: '1811—1872',
+    bioUrl: '/zeng',
+    coverColor: '#D4AF37',
+    tagline: '拙诚者',
+  },
 ];

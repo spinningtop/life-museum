@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import StarField from '@/musk/components/StarField';
 import ScrollProgress from '@/musk/components/ScrollProgress';
+import BackToTop from '@/components/BackToTop';
 import Hero from '@/musk/components/Hero';
 import Prologue from '@/musk/components/Prologue';
 import Timeline from '@/musk/components/Timeline';
@@ -45,6 +46,7 @@ export default function MuskPage() {
         <ThemeDeep />
         <Epilogue />
       </main>
+      <BackToTop />
     </div>
   );
 }

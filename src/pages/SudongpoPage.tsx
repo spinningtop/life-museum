@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import InkSplash from '@/sudongpo/components/InkSplash';
 import ScrollProgress from '@/sudongpo/components/ScrollProgress';
+import BackToTop from '@/components/BackToTop';
 import Hero from '@/sudongpo/components/Hero';
 import Prologue from '@/sudongpo/components/Prologue';
 import Timeline from '@/sudongpo/components/Timeline';
@@ -45,6 +46,7 @@ export default function SudongpoPage() {
         <ThemeDeep />
         <Epilogue />
       </main>
+      <BackToTop />
     </div>
   );
 }

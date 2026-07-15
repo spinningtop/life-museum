@@ -14,12 +14,12 @@ export default function DramaticMoments() {
     <section className="relative mx-auto max-w-6xl px-6 py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题 */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center sm:mb-16">
           <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#c73e3a]">DRAMATIC</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f5e6d3] sm:text-5xl">
+          <h2 className="font-serif text-3xl font-bold text-[#f5e6d3] sm:text-4xl md:text-5xl">
             戏剧性时刻
           </h2>
-          <p className="mt-4 font-sans text-sm text-[#f5e6d3]/50">
+          <p className="mt-3 font-sans text-sm text-[#f5e6d3]/50">
             群星闪耀的时刻 · 八个决定命运的临界点
           </p>
         </div>
@@ -78,7 +78,7 @@ function MomentCard({ moment, index }: { moment: DramaticMoment; index: number }
 
       {/* 卡片 */}
       <div
-        className={`glass-card group relative overflow-hidden p-6 text-left transition-all duration-500 hover:translate-y-[-2px] ${
+        className={`glass-card group relative overflow-hidden p-5 text-left transition-all duration-500 hover:translate-y-[-2px] sm:p-6 ${
           isKey ? 'sm:p-8' : ''
         }`}
         style={{

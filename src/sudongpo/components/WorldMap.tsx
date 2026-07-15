@@ -45,11 +45,8 @@ export default function WorldMap() {
         </div>
 
         {/* 地图容器 */}
-        <div className="glass-card relative overflow-hidden p-4 sm:p-8">
-          <div
-            className="relative w-full overflow-hidden rounded-2xl"
-            style={{ height: '560px' }}
-          >
+        <div className="glass-card relative overflow-hidden p-4 sm:p-6 md:p-8">
+          <div className="relative w-full overflow-hidden rounded-2xl h-[380px] sm:h-[480px] md:h-[560px]">
             <MapContainer
               center={[35, 110]}
               zoom={4}

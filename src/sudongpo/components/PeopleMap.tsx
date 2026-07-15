@@ -212,7 +212,7 @@ export default function PeopleMap() {
                   const midX = (from.x + to.x) / 2;
                   const midY = (from.y + to.y) / 2;
                   const angle = Math.atan2(to.y - from.y, to.x - from.x);
-                  const offset = 15;
+                  const offset = 20;
                   const labelX = midX + Math.cos(angle + Math.PI / 2) * offset;
                   const labelY = midY + Math.sin(angle + Math.PI / 2) * offset;
 
@@ -224,17 +224,17 @@ export default function PeopleMap() {
                         x2={to.x}
                         y2={to.y}
                         stroke={style.stroke}
-                        strokeWidth={Math.max(style.strokeWidth - 0.6, 0.8) + (isSel ? 1 : 0)}
+                        strokeWidth={Math.max(style.strokeWidth - 0.4, 1) + (isSel ? 1.2 : 0)}
                         strokeOpacity={isSel ? 0.95 : active ? style.opacity * 0.8 : 0.08}
                         strokeDasharray="4 4"
                         style={{ transition: 'stroke-opacity 0.3s' }}
                       />
                       <g transform={`translate(${labelX} ${labelY})`}>
                         <rect
-                          x="-22"
-                          y="-9"
-                          width="44"
-                          height="18"
+                          x="-26"
+                          y="-11"
+                          width="52"
+                          height="22"
                           rx="4"
                           fill="rgba(245, 230, 211, 0.15)"
                           stroke="rgba(245, 230, 211, 0.4)"
@@ -243,10 +243,10 @@ export default function PeopleMap() {
                         />
                         <text
                           x={0}
-                          y="4"
+                          y="5"
                           textAnchor="middle"
                           className="font-sans"
-                          fontSize={10}
+                          fontSize={12}
                           fill="#f5e6d3"
                           fillOpacity={active ? 0.9 : 0.4}
                           style={{ pointerEvents: 'none' }}
@@ -260,7 +260,7 @@ export default function PeopleMap() {
                         x2={to.x}
                         y2={to.y}
                         stroke="transparent"
-                        strokeWidth={14}
+                        strokeWidth={24}
                         style={{ cursor: 'pointer' }}
                         onClick={(e) => {
                           e.stopPropagation();
@@ -285,7 +285,7 @@ export default function PeopleMap() {
                   const midX = (from.x + to.x) / 2;
                   const midY = (from.y + to.y) / 2;
                   const angle = Math.atan2(to.y - from.y, to.x - from.x);
-                  const offset = 15;
+                  const offset = 20;
                   const labelX = midX + Math.cos(angle + Math.PI / 2) * offset;
                   const labelY = midY + Math.sin(angle + Math.PI / 2) * offset;
 
@@ -297,16 +297,16 @@ export default function PeopleMap() {
                         x2={to.x}
                         y2={to.y}
                         stroke={style.stroke}
-                        strokeWidth={style.strokeWidth + (isSel ? 1.2 : 0)}
+                        strokeWidth={style.strokeWidth + (isSel ? 1.5 : 0)}
                         strokeOpacity={isSel ? 0.95 : active ? style.opacity : 0.08}
                         style={{ transition: 'stroke-opacity 0.3s' }}
                       />
                       <g transform={`translate(${labelX} ${labelY})`}>
                         <rect
-                          x="-22"
-                          y="-9"
-                          width="44"
-                          height="18"
+                          x="-26"
+                          y="-11"
+                          width="52"
+                          height="22"
                           rx="4"
                           fill="rgba(245, 230, 211, 0.15)"
                           stroke="rgba(245, 230, 211, 0.4)"
@@ -315,10 +315,10 @@ export default function PeopleMap() {
                         />
                         <text
                           x={0}
-                          y="4"
+                          y="5"
                           textAnchor="middle"
                           className="font-sans"
-                          fontSize={10}
+                          fontSize={12}
                           fill="#f5e6d3"
                           fillOpacity={active ? 0.9 : 0.4}
                           style={{ pointerEvents: 'none' }}
@@ -332,7 +332,7 @@ export default function PeopleMap() {
                         x2={to.x}
                         y2={to.y}
                         stroke="transparent"
-                        strokeWidth={14}
+                        strokeWidth={24}
                         style={{ cursor: 'pointer' }}
                         onClick={(e) => {
                           e.stopPropagation();
@@ -371,8 +371,8 @@ export default function PeopleMap() {
                       }}
                     >
                       {/* 脉冲光晕 */}
-                      <circle cx={0} cy={0} r={18} fill={person.color} opacity={dim ? 0.08 : 0.35}>
-                        <animate attributeName="r" values="18;24;18" dur="3s" repeatCount="indefinite" />
+                      <circle cx={0} cy={0} r={22} fill={person.color} opacity={dim ? 0.08 : 0.35}>
+                        <animate attributeName="r" values="22;30;22" dur="3s" repeatCount="indefinite" />
                         <animate
                           attributeName="opacity"
                           values={dim ? '0.08;0.08;0.08' : '0.35;0;0.35'}
@@ -384,28 +384,28 @@ export default function PeopleMap() {
                       <circle
                         cx={0}
                         cy={0}
-                        r={20}
+                        r={24}
                         fill={person.color}
                         fillOpacity={dim ? 0.4 : 1}
                         stroke="#0f0f1a"
-                        strokeWidth={2}
+                        strokeWidth={2.5}
                         style={{ transition: 'fill-opacity 0.25s' }}
                       />
                       {/* 悬停高亮环 */}
                       {isHover && (
-                        <circle cx={0} cy={0} r={24} fill="none" stroke={person.color} strokeWidth={2} opacity={0.9} />
+                        <circle cx={0} cy={0} r={30} fill="none" stroke={person.color} strokeWidth={2.5} opacity={0.9} />
                       )}
                       {/* 选中高亮环 */}
                       {isSel && (
-                        <circle cx={0} cy={0} r={26} fill="none" stroke="#f5e6d3" strokeWidth={1.5} opacity={0.8} />
+                        <circle cx={0} cy={0} r={32} fill="none" stroke="#f5e6d3" strokeWidth={2} opacity={0.8} />
                       )}
                       {/* 姓名标签：节点下方 */}
                       <text
                         x={0}
-                        y={34}
+                        y={40}
                         textAnchor="middle"
                         className="font-sans"
-                        fontSize={13}
+                        fontSize={15}
                         fill="#f5e6d3"
                         fillOpacity={dim ? 0.3 : 0.95}
                         style={{ transition: 'fill-opacity 0.25s', pointerEvents: 'none' }}
@@ -420,20 +420,20 @@ export default function PeopleMap() {
                 {/* 主角节点（居中，最后绘制确保在最上层） */}
                 <g transform={`translate(${CENTER.x} ${CENTER.y})`}>
                   {/* 外层光晕 */}
-                  <circle cx={0} cy={0} r={60} fill="url(#heroGlow)" />
+                  <circle cx={0} cy={0} r={72} fill="url(#heroGlow)" />
                   {/* 脉冲圈 */}
-                  <circle cx={0} cy={0} r={28} fill="#f5e6d3" opacity={0.25}>
-                    <animate attributeName="r" values="28;40;28" dur="3.5s" repeatCount="indefinite" />
+                  <circle cx={0} cy={0} r={34} fill="#f5e6d3" opacity={0.25}>
+                    <animate attributeName="r" values="34;48;34" dur="3.5s" repeatCount="indefinite" />
                     <animate attributeName="opacity" values="0.25;0;0.25" dur="3.5s" repeatCount="indefinite" />
                   </circle>
                   {/* 主体 */}
                   <circle
                     cx={0}
                     cy={0}
-                    r={28}
+                    r={34}
                     fill="#f5e6d3"
                     stroke="#c73e3a"
-                    strokeWidth={2.5}
+                    strokeWidth={3}
                     style={{ cursor: 'pointer' }}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -444,10 +444,10 @@ export default function PeopleMap() {
                   {/* 中心单字"苏" */}
                   <text
                     x={0}
-                    y={5}
+                    y={6}
                     textAnchor="middle"
                     className="font-serif font-bold"
-                    fontSize={14}
+                    fontSize={18}
                     fill="#0f0f1a"
                     style={{ pointerEvents: 'none' }}
                   >

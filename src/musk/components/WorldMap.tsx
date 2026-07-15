@@ -34,22 +34,21 @@ export default function WorldMap() {
   const pathPositions: [number, number][] = locations.map((loc) => [loc.lat, loc.lng]);
 
   return (
-    <section className="relative mx-auto max-w-7xl px-6 py-20">
+    <section className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#e63946]">FOOTPRINTS</p>
-          <h2 className="font-serif text-4xl font-bold text-[#f1faee] sm:text-5xl">全球足迹</h2>
-          <p className="mt-4 font-sans text-sm text-[#f1faee]/50">
+        <div className="mb-10 text-center sm:mb-12">
+          <p className="mb-2 font-sans text-xs tracking-[0.25em] text-[#e63946] sm:mb-3 sm:text-sm sm:tracking-[0.3em]">FOOTPRINTS</p>
+          <h2 className="font-serif text-3xl font-bold text-[#f1faee] sm:text-4xl md:text-5xl">全球足迹</h2>
+          <p className="mt-3 font-sans text-xs text-[#f1faee]/50 sm:mt-4 sm:text-sm">
             从南非到火星 · 十五个改变命运的坐标
           </p>
         </div>
 
         {/* 地图容器 */}
-        <div className="glass-card relative overflow-hidden p-4 sm:p-8">
+        <div className="glass-card relative overflow-hidden p-3 sm:p-6 md:p-8">
           <div
-            className="muskm-map-container relative w-full overflow-hidden rounded-2xl"
-            style={{ height: '500px' }}
+            className="muskm-map-container relative w-full overflow-hidden rounded-2xl h-[300px] sm:h-[400px] md:h-[500px]"
           >
             <MapContainer
               center={[20, 0]}

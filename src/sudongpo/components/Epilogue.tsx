@@ -27,13 +27,13 @@ export default function Epilogue() {
         <p className="mb-3 font-sans text-sm tracking-[0.3em] text-[#c73e3a]">EPILOGUE</p>
 
         {/* 标题 */}
-        <h2 className="font-serif text-4xl font-bold text-[#f5e6d3] sm:text-5xl">
+        <h2 className="font-serif text-3xl font-bold text-[#f5e6d3] sm:text-4xl md:text-5xl">
           尾声：一蓑烟雨任平生
         </h2>
 
         {/* 毛笔图标 */}
-        <div className="my-10 flex justify-center">
-          <Feather className="h-10 w-10 text-[#c73e3a] animate-pulse" />
+        <div className="my-8 flex justify-center sm:my-10">
+          <Feather className="h-8 w-8 text-[#c73e3a] animate-pulse sm:h-10 sm:w-10" />
         </div>
 
         {/* 总结引文 */}
@@ -42,17 +42,17 @@ export default function Epilogue() {
             className="animate-fade-in-up mx-auto max-w-3xl opacity-0"
             style={{ animationDelay: '0.3s' }}
           >
-            <p className="font-serif text-lg leading-loose text-[#f5e6d3]/85 sm:text-xl md:text-2xl">
+            <p className="font-serif text-base leading-loose text-[#f5e6d3]/85 sm:text-lg md:text-xl lg:text-2xl">
               {summaryQuote.text}
             </p>
-            <footer className="mt-4 font-sans text-sm text-[#c73e3a]/80">
+            <footer className="mt-3 font-sans text-xs text-[#c73e3a]/80 sm:mt-4 sm:text-sm">
               —— 《{summaryQuote.source}》 · {summaryQuote.year}年
             </footer>
           </blockquote>
         )}
 
         {/* 分隔 */}
-        <div className="mx-auto my-12 h-px w-32 bg-gradient-to-r from-transparent via-[#c73e3a]/60 to-transparent" />
+        <div className="mx-auto my-10 h-px w-24 bg-gradient-to-r from-transparent via-[#c73e3a]/60 to-transparent sm:my-12 sm:w-32" />
 
         {/* 终极追问 */}
         {finalQuestion && (
@@ -60,10 +60,10 @@ export default function Epilogue() {
             className="animate-fade-in-up opacity-0"
             style={{ animationDelay: '0.8s' }}
           >
-            <p className="font-serif text-2xl font-bold leading-relaxed text-gradient-ink sm:text-3xl md:text-4xl">
+            <p className="font-serif text-xl font-bold leading-relaxed text-gradient-ink sm:text-2xl md:text-3xl lg:text-4xl">
               {finalQuestion.text}
             </p>
-            <footer className="mt-4 font-sans text-sm text-[#f5e6d3]/50">
+            <footer className="mt-3 font-sans text-xs text-[#f5e6d3]/50 sm:mt-4 sm:text-sm">
               —— 《{finalQuestion.source}》 · {finalQuestion.year}年
             </footer>
           </blockquote>

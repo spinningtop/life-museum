@@ -20,7 +20,7 @@ const PRINCIPLES = [
   {
     icon: Sparkles,
     title: '可对照',
-    desc: '跨越九百年的两个人，在同一片星空下被并置。冒险家与文人，原来共享同一种孤独。',
+    desc: '跨越九百年的四段人生，在同一片星空下交相辉映。冒险家、文人、设计师与名臣，原来共享同一种求索。',
   },
 ];
 
@@ -32,22 +32,22 @@ export default function Philosophy() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section className="relative mx-auto max-w-5xl px-6 py-24">
+    <section className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
       <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
         {/* 鎏金分割线 */}
-        <hr className="gold-divider mb-20" />
+        <hr className="gold-divider mb-12 sm:mb-20" />
 
         {/* 主理陈述 */}
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <p className="mb-4 font-sans text-sm tracking-[0.3em] text-[#D4A24C]">
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-16">
+          <p className="mb-3 font-sans text-xs tracking-[0.25em] text-[#D4A24C] sm:text-sm sm:tracking-[0.3em]">
             PHILOSOPHY
           </p>
-          <h2 className="font-serif text-3xl font-bold leading-relaxed text-[#F5F1E8] sm:text-4xl">
+          <h2 className="font-serif text-2xl font-bold leading-relaxed text-[#F5F1E8] sm:text-3xl md:text-4xl">
             把一本人物传记，
             <br />
             变成一座<span className="text-gold-gradient">可漫游的博物馆</span>。
           </h2>
-          <p className="mt-6 font-sans text-base leading-relaxed text-[#F5F1E8]/60">
+          <p className="mt-4 font-sans text-sm leading-relaxed text-[#F5F1E8]/60 sm:mt-6 sm:text-base">
             我们相信，一个人的一生不该被压缩成一份年表或一段摘要。
             它有空间、有时间、有岔路、有回声。
             在这里，传记被拆解为可漫步的展厅——
@@ -57,18 +57,19 @@ export default function Philosophy() {
 
         {/* 四个理念卡片 */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {PRINCIPLES.map((p) => (
+          {PRINCIPLES.map((p, i) => (
             <div
               key={p.title}
-              className="glass-card group p-6 text-center transition-all duration-500 hover:translate-y-[-3px]"
+              className="glass-card group p-5 text-center transition-all duration-500 hover:translate-y-[-6px] sm:p-6"
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-[#D4A24C]/30 bg-[#D4A24C]/10">
-                <p.icon className="h-5 w-5 text-[#D4A24C]" />
+              <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#D4A24C]/30 bg-[#D4A24C]/10 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(212,162,76,0.3)] sm:mb-4 sm:h-12 sm:w-12">
+                <p.icon className="h-4 w-4 text-[#D4A24C] transition-transform duration-300 group-hover:rotate-[-5deg] sm:h-5 sm:w-5" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-[#F5F1E8]">
+              <h3 className="font-serif text-base font-bold text-[#F5F1E8] transition-all duration-300 group-hover:text-gold-gradient sm:text-lg">
                 {p.title}
               </h3>
-              <p className="mt-2 font-sans text-xs leading-relaxed text-[#F5F1E8]/60">
+              <p className="mt-2 font-sans text-xs leading-relaxed text-[#F5F1E8]/60 transition-colors duration-300 group-hover:text-[#F5F1E8]/80">
                 {p.desc}
               </p>
             </div>
