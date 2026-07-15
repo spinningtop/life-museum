@@ -4,6 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/life-museum/', // 新增这一行！适配GitHub Pages
   server: {
     port: 5180,
     host: true,
